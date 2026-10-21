@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rehnumabanu Patel | Portfolio</title>
+  <meta name="description" content="Portfolio of Rehnumabanu Patel - MSc Cybersecurity Management student and full-stack web developer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="nav-logo">Rehnuma<span>Patel</span></a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div class="hero-text reveal">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">Rehnumabanu Patel</h1>
+          <h2 class="hero-role">I'm a <span class="typing" id="typing"></span><span class="cursor">|</span></h2>
+          <p class="hero-desc">
+            MSc Cybersecurity Management student at The University of Law, Manchester,
+            with a background in Computer Applications and hands-on experience building
+            full-stack web applications with ASP.NET Core and React.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/rehnuma-patel" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/patel-rehnuma-464298315" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:patel.rehnumain26@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="hero-image reveal">
+          <div class="image-blob">
+            <img src="assets/profile.jpg" alt="Profile photo of Rehnumabanu Patel"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('no-img')" />
+            <span class="initials">RP</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title reveal">About <span>Me</span></h2>
+        <div class="about-content">
+          <div class="about-text reveal">
+            <p>
+              I'm a motivated <strong>MSc Cybersecurity Management</strong> student based in the UK.
+              I completed my <strong>Bachelor of Computer Applications</strong> at Veer Narmad South
+              Gujarat University, where I was awarded a <strong>Silver Medal for securing Second Rank</strong>.
+            </p>
+            <p>
+              I enjoy building clean, responsive web applications. My skills include front-end work
+              in HTML, CSS, JavaScript and React and back-end work in ASP.NET Core and C#.
+              Alongside my studies, I work in customer service in the UK, which has strengthened my
+              communication, teamwork and reliability.
+            </p>
+          </div>
+          <div class="about-stats reveal">
+            <div class="stat"><h3>2nd</h3><p>Rank in BCA</p></div>
+            <div class="stat"><h3>4+</h3><p>Certifications</p></div>
+            <div class="stat"><h3>1+ yr</h3><p>UK Work Experience</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <h2 class="section-title reveal">My <span>Skills</span></h2>
+        <div class="skills-grid">
+          <div class="skill-card reveal"><i class="fa-brands fa-html5"></i><h3>HTML5</h3>
+            <div class="bar"><div class="bar-fill" data-width="90%"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-brands fa-css3-alt"></i><h3>CSS3 &amp; Bootstrap</h3>
+            <div class="bar"><div class="bar-fill" data-width="85%"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-brands fa-js"></i><h3>JavaScript</h3>
+            <div class="bar"><div class="bar-fill" data-width="80%"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-brands fa-react"></i><h3>React</h3>
+            <div class="bar"><div class="bar-fill" data-width="75%"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-brands fa-microsoft"></i><h3>ASP.NET Core &amp; C#</h3>
+            <div class="bar"><div class="bar-fill" data-width="75%"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-solid fa-plug"></i><h3>REST APIs, JSON &amp; XML</h3>
+            <div class="bar"><div class="bar-fill" data-width="80%"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-brands fa-git-alt"></i><h3>Git &amp; Debugging</h3>
+            <div class="bar"><div class="bar-fill" data-width="75%"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-solid fa-shield-halved"></i><h3>Cybersecurity Management</h3>
+            <div class="bar"><div class="bar-fill" data-width="65%"></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title reveal">My <span>Projects</span></h2>
+
+        <div class="filter-buttons reveal">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+          <button class="filter-btn" data-filter="frontend">Front-End</button>
+          <button class="filter-btn" data-filter="security">Security</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal" data-category="fullstack">
+            <div class="project-thumb" style="--c1:#6c63ff;--c2:#3ec6e0"><i class="fa-solid fa-helmet-safety"></i></div>
+            <div class="project-body">
+              <h3>Contractor Management System</h3>
+              <p>
+                Full-stack web app for contractors with GST billing, automated invoices,
+                labour management, site tracking, reports and multilingual support
+                (English, Gujarati, Hindi).
+              </p>
+              <div class="tags"><span>ASP.NET Core</span><span>React</span><span>C#</span><span>REST API</span></div>
+              <div class="project-links">
+                <a href="https://github.com/rehnuma-patel" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="frontend">
+            <div class="project-thumb" style="--c1:#ff6584;--c2:#ffb347"><i class="fa-solid fa-user-tie"></i></div>
+            <div class="project-body">
+              <h3>Personal Portfolio Website</h3>
+              <p>
+                This responsive portfolio, with smooth scrolling, scroll animations, a dark mode
+                toggle, project filtering and a contact form validated in JavaScript.
+              </p>
+              <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              <div class="project-links">
+                <a href="https://github.com/rehnuma-patel/internship-portfolio" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="security">
+            <div class="project-thumb" style="--c1:#00b894;--c2:#55efc4"><i class="fa-solid fa-key"></i></div>
+            <div class="project-body">
+              <h3>Password Strength Checker</h3>
+              <p>
+                Rates password strength in real time by checking length, character variety and
+                common patterns, then gives tips for creating a stronger password.
+              </p>
+              <div class="tags"><span>JavaScript</span><span>Web Crypto API</span><span>Security</span></div>
+              <div class="project-links">
+                <a href="https://github.com/rehnuma-patel/internship-portfolio/tree/main/projects/password-checker" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="projects/password-checker/index.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="security">
+            <div class="project-thumb" style="--c1:#a29bfe;--c2:#fd79a8"><i class="fa-solid fa-fish"></i></div>
+            <div class="project-body">
+              <h3>Phishing Awareness Quiz</h3>
+              <p>
+                Interactive quiz that shows sample emails and links and asks users to spot phishing
+                attempts, with an explanation of each warning sign.
+              </p>
+              <div class="tags"><span>JavaScript</span><span>Cyber Awareness</span><span>UI/UX</span></div>
+              <div class="project-links">
+                <a href="https://github.com/rehnuma-patel/internship-portfolio/tree/main/projects/phishing-quiz" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="projects/phishing-quiz/index.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION & EXPERIENCE ===== -->
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <h2 class="section-title reveal">Education &amp; <span>Experience</span></h2>
+        <div class="timeline-wrapper">
+          <div class="timeline">
+            <h3 class="timeline-heading reveal"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+            <div class="timeline-item reveal">
+              <span class="timeline-date">Expected Oct 2027</span>
+              <h4>MSc Cybersecurity Management with Professional Practice</h4>
+              <p class="timeline-place">The University of Law, Manchester, United Kingdom</p>
+              <p>Currently studying</p>
+            </div>
+            <div class="timeline-item reveal">
+              <span class="timeline-date">Completed March 2025</span>
+              <h4>Bachelor of Computer Applications (BCA)</h4>
+              <p class="timeline-place">Veer Narmad South Gujarat University, Surat, Gujarat, India</p>
+              <p>Silver Medal: Second Rank in the university</p>
+            </div>
+          </div>
+
+          <div class="timeline">
+            <h3 class="timeline-heading reveal"><i class="fa-solid fa-briefcase"></i> Experience</h3>
+            <div class="timeline-item reveal">
+              <span class="timeline-date">Sep 2025 – Present</span>
+              <h4>Retail Cashier</h4>
+              <p class="timeline-place">Texaco Irlam Service, Irlam, Manchester</p>
+              <p>
+                Handle point-of-sale transactions, balance end-of-shift reports, support customers
+                and train new staff on register operations, PayPoint and lottery.
+              </p>
+            </div>
+            <div class="timeline-item reveal">
+              <span class="timeline-date">Volunteer</span>
+              <h4>Full-Stack Developer</h4>
+              <p class="timeline-place">Contractor Management System</p>
+              <p>
+                Designed and built the system with ASP.NET Core and React, including RESTful APIs,
+                database operations, GST billing and reporting modules.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ACHIEVEMENTS ===== -->
+    <section class="section" id="achievements">
+      <div class="container">
+        <h2 class="section-title reveal">Certifications &amp; <span>Achievements</span></h2>
+        <div class="achievements-grid">
+          <div class="achievement-card reveal">
+            <i class="fa-solid fa-medal"></i>
+            <h3>Silver Medal: Second Rank</h3>
+            <p>Second Rank in BCA at Veer Narmad South Gujarat University.</p>
+          </div>
+          <div class="achievement-card reveal">
+            <i class="fa-solid fa-code"></i>
+            <h3>Web Development Certifications</h3>
+            <p>HTML, CSS, JavaScript and React, completed through ITonlineLearning.</p>
+          </div>
+          <div class="achievement-card reveal">
+            <i class="fa-solid fa-calculator"></i>
+            <h3>Tally ERP Certification</h3>
+            <p>Accounting, GST and financial management.</p>
+          </div>
+          <div class="achievement-card reveal">
+            <i class="fa-solid fa-certificate"></i>
+            <h3>CCC (Course on Computer Concepts)</h3>
+            <p>Government-recognised certification in computer fundamentals, MS Office and internet applications.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <h2 class="section-title reveal">Contact <span>Me</span></h2>
+        <div class="contact-wrapper">
+          <div class="contact-info reveal">
+            <h3>Let's work together!</h3>
+            <p>I'm open to part-time roles, internships and project opportunities. Feel free to reach out.</p>
+            <ul>
+              <li><i class="fa-solid fa-envelope"></i> <a href="mailto:patel.rehnumain26@gmail.com">patel.rehnumain26@gmail.com</a></li>
+              <li><i class="fa-solid fa-phone"></i> <a href="tel:+447344412369">+44 7344 412369</a></li>
+              <li><i class="fa-solid fa-location-dot"></i> Manchester, United Kingdom</li>
+              <li><i class="fa-brands fa-github"></i> <a href="https://github.com/rehnuma-patel" target="_blank" rel="noopener">github.com/rehnuma-patel</a></li>
+              <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/patel-rehnuma-464298315" target="_blank" rel="noopener">linkedin.com/in/patel-rehnuma</a></li>
+            </ul>
+          </div>
+
+          <form class="contact-form reveal" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" />
+              <small class="error"></small>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" />
+              <small class="error"></small>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?" />
+              <small class="error"></small>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message..."></textarea>
+              <small class="error"></small>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+            <p class="form-success" id="form-success" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Rehnumabanu Patel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

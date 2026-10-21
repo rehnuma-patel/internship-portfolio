@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Strength Checker | Rehnumabanu Patel</title>
+  <meta name="description" content="Check how strong your password is in real time. Everything runs in your browser." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <a href="../../index.html#projects" class="back"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+
+    <header class="card-header">
+      <div class="logo"><i class="fa-solid fa-shield-halved"></i></div>
+      <h1>Password Strength Checker</h1>
+      <p class="subtitle">Type a password to see how strong it is.</p>
+    </header>
+
+    <label for="password" class="label">Password</label>
+    <div class="input-wrap">
+      <input type="password" id="password" placeholder="Enter a password" autocomplete="off" spellcheck="false" />
+      <button type="button" class="icon-btn" id="toggle" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+      <button type="button" class="icon-btn" id="copy" aria-label="Copy password"><i class="fa-regular fa-copy"></i></button>
+    </div>
+
+    <div class="meter" aria-hidden="true">
+      <div class="meter-fill" id="meter-fill"></div>
+    </div>
+    <div class="result">
+      <span id="strength-label" class="strength-label">Start typing…</span>
+      <span id="crack-time" class="crack-time"></span>
+    </div>
+
+    <h2 class="section-heading">Requirements</h2>
+    <ul class="checklist" id="checklist">
+      <li data-rule="length"><i class="fa-solid fa-circle-xmark"></i> At least 12 characters</li>
+      <li data-rule="lower"><i class="fa-solid fa-circle-xmark"></i> Lowercase letter (a–z)</li>
+      <li data-rule="upper"><i class="fa-solid fa-circle-xmark"></i> Uppercase letter (A–Z)</li>
+      <li data-rule="number"><i class="fa-solid fa-circle-xmark"></i> Number (0–9)</li>
+      <li data-rule="symbol"><i class="fa-solid fa-circle-xmark"></i> Symbol (!@#$…)</li>
+      <li data-rule="common"><i class="fa-solid fa-circle-xmark"></i> Not a commonly used password</li>
+      <li data-rule="pattern"><i class="fa-solid fa-circle-xmark"></i> No repeats or sequences (aaa, 123, abc)</li>
+    </ul>
+
+    <div class="tips" id="tips" hidden>
+      <h2 class="section-heading"><i class="fa-solid fa-lightbulb"></i> Tips</h2>
+      <ul id="tips-list"></ul>
+    </div>
+
+    <button type="button" class="btn" id="generate"><i class="fa-solid fa-wand-magic-sparkles"></i> Generate a Strong Password</button>
+
+    <p class="privacy"><i class="fa-solid fa-lock"></i> Your password never leaves your browser. Nothing is sent or saved.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

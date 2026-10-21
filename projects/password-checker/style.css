@@ -1,0 +1,178 @@
+:root {
+  --primary: #6c63ff;
+  --bg: linear-gradient(135deg, #e9e7ff, #e0f7fb);
+  --card: #ffffff;
+  --text: #22223b;
+  --text-light: #5c5f77;
+  --border: #e3e5f0;
+  --weak: #e63946;
+  --fair: #f4a261;
+  --good: #e9c46a;
+  --strong: #2a9d8f;
+  --very-strong: #1d7a6f;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  background: var(--card);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(34, 34, 59, 0.12);
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--primary);
+  text-decoration: none;
+  margin-bottom: 1rem;
+  transition: gap 0.3s;
+}
+.back:hover { gap: 0.7rem; }
+
+.card-header { text-align: center; margin-bottom: 1.5rem; }
+.logo {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 0.8rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  color: #fff;
+  background: linear-gradient(135deg, #00b894, #55efc4);
+}
+h1 { font-size: 1.5rem; }
+.subtitle { color: var(--text-light); font-size: 0.95rem; }
+
+.label { display: block; font-weight: 500; margin-bottom: 0.4rem; }
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding-right: 0.4rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.input-wrap:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+.input-wrap input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0.85rem 1rem;
+  font-family: "Courier New", monospace;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+.icon-btn {
+  border: none;
+  background: none;
+  color: var(--text-light);
+  font-size: 1.05rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: color 0.3s, background 0.3s;
+}
+.icon-btn:hover { color: var(--primary); background: rgba(108, 99, 255, 0.1); }
+
+.meter {
+  height: 10px;
+  margin-top: 1rem;
+  background: var(--border);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.meter-fill {
+  width: 0;
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.4s ease, background 0.4s ease;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+.strength-label { font-weight: 600; }
+.crack-time { color: var(--text-light); }
+
+.section-heading { font-size: 1rem; margin: 1.5rem 0 0.6rem; }
+
+.checklist li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.3rem 0;
+  font-size: 0.92rem;
+  color: var(--text-light);
+  list-style: none;
+  transition: color 0.3s;
+}
+.checklist li i { color: var(--weak); transition: transform 0.3s, color 0.3s; }
+.checklist li.pass { color: var(--text); }
+.checklist li.pass i { color: var(--strong); transform: scale(1.15); }
+
+.tips {
+  margin-top: 0.5rem;
+  background: #fff8e6;
+  border-left: 4px solid var(--fair);
+  border-radius: 8px;
+  padding: 0.2rem 1rem 0.8rem;
+}
+.tips .section-heading { margin-top: 0.8rem; color: #b5651d; }
+.tips li { font-size: 0.9rem; margin-left: 1.1rem; color: var(--text-light); }
+
+.btn {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.85rem;
+  border: none;
+  border-radius: 50px;
+  background: var(--primary);
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3); }
+
+.privacy {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+@media (max-width: 480px) {
+  .card { padding: 1.4rem; }
+  h1 { font-size: 1.3rem; }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phishing Awareness Quiz | Rehnumabanu Patel</title>
+  <meta name="description" content="Can you spot a phishing email? Test yourself with this interactive quiz." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <a href="../../index.html#projects" class="back"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+
+    <!-- START SCREEN -->
+    <section class="screen" id="start-screen">
+      <div class="logo"><i class="fa-solid fa-fish"></i></div>
+      <h1>Phishing Awareness Quiz</h1>
+      <p class="subtitle">
+        You'll see <strong id="total-count">8</strong> messages. For each one, decide whether it's
+        <strong>phishing</strong> or <strong>legitimate</strong>. Then learn which warning signs to look for.
+      </p>
+      <p class="note">All companies, names and links in this quiz are made up for training purposes.</p>
+      <button class="btn" id="start-btn">Start Quiz <i class="fa-solid fa-arrow-right"></i></button>
+    </section>
+
+    <!-- QUESTION SCREEN -->
+    <section class="screen" id="quiz-screen" hidden>
+      <div class="progress-info">
+        <span id="question-count">Question 1 of 8</span>
+        <span>Score: <strong id="score">0</strong></span>
+      </div>
+      <div class="progress"><div class="progress-fill" id="progress-fill"></div></div>
+
+      <article class="email">
+        <div class="email-row"><span class="email-key">From:</span> <span id="email-from"></span></div>
+        <div class="email-row"><span class="email-key">Subject:</span> <strong id="email-subject"></strong></div>
+        <div class="email-body" id="email-body"></div>
+      </article>
+
+      <div class="answers">
+        <button class="answer phishing" data-answer="phishing"><i class="fa-solid fa-triangle-exclamation"></i> Phishing</button>
+        <button class="answer legit" data-answer="legit"><i class="fa-solid fa-circle-check"></i> Legitimate</button>
+      </div>
+
+      <div class="feedback" id="feedback" hidden>
+        <h3 id="feedback-title"></h3>
+        <ul id="feedback-list"></ul>
+        <button class="btn" id="next-btn">Next <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </section>
+
+    <!-- RESULT SCREEN -->
+    <section class="screen" id="result-screen" hidden>
+      <div class="logo" id="result-icon"><i class="fa-solid fa-trophy"></i></div>
+      <h1 id="result-title"></h1>
+      <p class="big-score"><span id="final-score">0</span> / <span id="final-total">8</span></p>
+      <p class="subtitle" id="result-message"></p>
+
+      <div class="checklist">
+        <h3><i class="fa-solid fa-list-check"></i> Quick Phishing Checklist</h3>
+        <ul>
+          <li>Check the sender's <strong>real email address</strong>, not just the display name.</li>
+          <li>Hover over links to see the <strong>actual URL</strong> before clicking.</li>
+          <li>Be suspicious of <strong>urgency, threats or prizes</strong>.</li>
+          <li>Legitimate companies <strong>never ask for passwords</strong> or card PINs by email.</li>
+          <li>Watch for <strong>unexpected attachments</strong>, especially .zip, .exe or macro files.</li>
+          <li>If unsure, contact the company <strong>using their official website or phone number</strong>.</li>
+        </ul>
+      </div>
+
+      <button class="btn" id="restart-btn"><i class="fa-solid fa-rotate-right"></i> Try Again</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
