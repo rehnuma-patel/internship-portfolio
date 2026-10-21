@@ -2,6 +2,8 @@
 
 A responsive personal portfolio website built with HTML, CSS and JavaScript.
 
+🌐 **Live site:** https://rehnuma-patel.github.io/internship-portfolio/
+
 ## Features
 - Responsive layout (Flexbox + CSS Grid, mobile menu)
 - Smooth scrolling and active navigation highlighting
