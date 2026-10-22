@@ -6,6 +6,7 @@ const navLinks = document.querySelectorAll(".nav-link");
 const themeToggle = document.getElementById("theme-toggle");
 const backToTop = document.getElementById("back-to-top");
 const sections = document.querySelectorAll("section[id]");
+const progressBar = document.getElementById("scroll-progress");
 
 // ===== MOBILE MENU =====
 navToggle.addEventListener("click", () => {
@@ -35,7 +36,8 @@ function setTheme(theme) {
 
 let savedTheme = null;
 try { savedTheme = localStorage.getItem("theme"); } catch (e) { /* storage blocked */ }
-setTheme(savedTheme || "light");
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+setTheme(savedTheme || (prefersDark ? "dark" : "light"));
 
 themeToggle.addEventListener("click", () => {
   const current = document.documentElement.getAttribute("data-theme");
@@ -48,6 +50,9 @@ function onScroll() {
 
   header.classList.toggle("scrolled", scrollY > 20);
   backToTop.classList.toggle("show", scrollY > 500);
+
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = maxScroll > 0 ? (scrollY / maxScroll) * 100 + "%" : "0";
 
   sections.forEach((section) => {
     const top = section.offsetTop - 100;
@@ -88,7 +93,21 @@ function type() {
 }
 type();
 
-// ===== SCROLL REVEAL + SKILL BARS =====
+// ===== STAT COUNTERS =====
+function countUp(el) {
+  const target = Number(el.dataset.target);
+  const duration = 1200;
+  const start = performance.now();
+
+  function step(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    el.textContent = Math.round(progress * target);
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+// ===== SCROLL REVEAL + SKILL BARS + COUNTERS =====
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -97,6 +116,8 @@ const observer = new IntersectionObserver(
 
       const bar = entry.target.querySelector(".bar-fill");
       if (bar) bar.style.width = bar.dataset.width;
+
+      entry.target.querySelectorAll(".count").forEach(countUp);
 
       observer.unobserve(entry.target);
     });
